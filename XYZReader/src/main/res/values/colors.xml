@@ -24,6 +24,5 @@
     <color name="theme_accent">#FF4081</color>
 
     <color name="article_headline">#000000</color>
-    <color name="ltgray">#ffe0e0e0</color>
     <color name="subtitle_text_color">#757575</color>
 </resources>

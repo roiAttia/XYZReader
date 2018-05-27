@@ -8,14 +8,12 @@
     tools:context=".ui.ArticleListActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.Bacon.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -24,19 +22,18 @@
             app:toolbarId="@+id/toolbar">
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/Theme.Bacon.PopupOverlay"
                 app:layout_scrollFlags="scroll|enterAlways"/>
 
             <ImageView
-                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_gravity="bottom|left"
-                android:src="@drawable/logo" />
+                android:layout_gravity="bottom|start"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/article_image_content_description" />
 
 
 

@@ -11,10 +11,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -42,24 +39,19 @@ public class ArticleListActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String TAG = ArticleListActivity.class.toString();
-    private Toolbar mToolbar;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
 
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
     // Use default locale format
-    private SimpleDateFormat outputFormat = new SimpleDateFormat();
+    private final SimpleDateFormat outputFormat = new SimpleDateFormat();
     // Most time functions can only handle 1902 - 2037
-    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
+    private final GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list_scrolling);
-
-        mToolbar = findViewById(R.id.toolbar);
-
-//        final View toolbarContainerView = findViewById(R.id.toolbar);
 
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
 
@@ -90,7 +82,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     private boolean mIsRefreshing = false;
 
-    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (UpdaterService.BROADCAST_ACTION_STATE_CHANGE.equals(intent.getAction())) {
@@ -130,9 +122,9 @@ public class ArticleListActivity extends AppCompatActivity implements
     // Adapter //
 
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
-        private Cursor mCursor;
+        private final Cursor mCursor;
 
-        public Adapter(Cursor cursor) {
+        Adapter(Cursor cursor) {
             mCursor = cursor;
         }
 
@@ -200,11 +192,11 @@ public class ArticleListActivity extends AppCompatActivity implements
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public DynamicHeightNetworkImageView thumbnailView;
-        public TextView titleView;
-        public TextView subtitleView;
+        final DynamicHeightNetworkImageView thumbnailView;
+        final TextView titleView;
+        final TextView subtitleView;
 
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             super(view);
             thumbnailView = view.findViewById(R.id.thumbnail);
             titleView = view.findViewById(R.id.article_title);
