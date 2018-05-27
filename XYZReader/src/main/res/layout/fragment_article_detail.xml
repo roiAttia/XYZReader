@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,18 +19,18 @@
             <FrameLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/photo_placeholder">
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/detail_photo_height"
                     android:scaleType="centerCrop" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/detail_photo_height"
                     android:background="@drawable/photo_background_protection" />
 
             </FrameLayout>
@@ -39,25 +39,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/detail_card_top_margin"
                 android:background="#fff"
-                android:elevation="2dp"
+                android:elevation="@dimen/card_layout_elevation"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/share_fab"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="@dimen/fab_size"
+                    android:layout_height="@dimen/fab_size"
                     android:layout_gravity="bottom|end"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="@dimen/fab_margin_end"
                     android:background="@drawable/add_fab_background"
                     android:contentDescription="@string/action_share"
                     android:elevation="@dimen/fab_elevation"
                     android:src="@drawable/ic_share"
                     android:stateListAnimator="@anim/fab_state_list_anim"
-                    app:layout_constraintBottom_toTopOf="@+id/article_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/meta_bar"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/article_body" />
+                    app:layout_constraintTop_toBottomOf="@+id/meta_bar" />
 
                 <LinearLayout
                     android:id="@+id/meta_bar"
@@ -94,24 +95,22 @@
 
                 <TextView
                     android:id="@+id/article_body"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/article_body_horizontal_margin"
+                    android:layout_marginStart="@dimen/article_body_horizontal_margin"
+                    android:layout_marginTop="@dimen/article_body_top_margin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/article_body_text_size"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/meta_bar"
-                    tools:layout_editor_absoluteX="7dp"
-                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie, mauris quis mollis tincidunt, justo ipsum luctus nisi, et semper lacus diam eget massa. Suspendisse pharetra erat enim, pulvinar varius ligula venenatis sed. Cras interdum tortor varius, suscipit erat non, finibus nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vel ligula nunc. Curabitur vel laoreet dui, ut semper dui. Aenean tristique iaculis magna, ut tincidunt dui sollicitudin id. Cras in tristique nisi. Sed at dictum mi. Aenean aliquet pulvinar neque, ut aliquet tellus molestie vitae. In hac habitasse platea dictumst. Maecenas sollicitudin venenatis nibh sit amet vestibulum. Sed egestas mi vitae augue rhoncus finibus." />
+                    tools:text="@string/article_body_text" />
 
             </com.example.xyzreader.ui.MaxWidthConstraintLayout>
-        </LinearLayout>
+        </FrameLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>

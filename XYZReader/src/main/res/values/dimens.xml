@@ -20,5 +20,13 @@
     <dimen name="card_horizontal_margin">16dp</dimen>
     <dimen name="card_vertical_margin">8dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_layout_elevation">2dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_margin_end">8dp</dimen>
+    <dimen name="article_body_horizontal_margin">24dp</dimen>
+    <dimen name="article_body_top_margin">40dp</dimen>
+    <dimen name="article_body_text_size">16sp</dimen>
+    <dimen name="article_title_text_size">16sp</dimen>
+    <dimen name="article_subtitle_text_size">14sp</dimen>
 
 </resources>

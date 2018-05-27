@@ -41,6 +41,7 @@
             android:paddingStart="@dimen/text_horizontal_padding"
             android:paddingTop="@dimen/text_padding_top"
             android:textColor="@color/article_headline"
+            android:textSize="@dimen/article_title_text_size"
             tools:text="@string/title_text" />
 
         <TextView
@@ -54,6 +55,7 @@
             android:paddingEnd="@dimen/text_horizontal_padding"
             android:paddingStart="@dimen/text_horizontal_padding"
             android:textColor="@color/subtitle_text_color"
+            android:textSize="@dimen/article_subtitle_text_size"
             tools:text="@string/subtitle_text" />
     </LinearLayout>
 
