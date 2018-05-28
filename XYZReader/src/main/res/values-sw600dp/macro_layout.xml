@@ -1,9 +1,10 @@
 <resources>
 
     <!-- list -->
-    <integer name="list_column_count">2</integer>
+    <integer name="list_column_count">3</integer>
     <dimen name="article_title_text_size">18sp</dimen>
     <dimen name="article_subtitle_text_size">16sp</dimen>
+    <dimen name="articles_list_horizontal_margin">40dp</dimen>
 
     <!-- detail -->
     <bool name="detail_is_card">true</bool>

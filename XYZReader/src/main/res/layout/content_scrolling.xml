@@ -16,6 +16,8 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/articles_list_horizontal_margin"
+            android:layout_marginStart="@dimen/articles_list_horizontal_margin"
             tools:listitem="@layout/list_item_article" />
 
     </android.support.v4.widget.NestedScrollView>

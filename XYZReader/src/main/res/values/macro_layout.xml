@@ -1,12 +1,13 @@
 <resources>
     <!-- list -->
-    <integer name="list_column_count">1</integer>
+    <integer name="list_column_count">2</integer>
+    <dimen name="articles_list_horizontal_margin">8dp</dimen>
 
     <!-- detail -->
     <bool name="detail_is_card">false</bool>
 
     <dimen name="detail_title_text_size">32sp</dimen>
-    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="detail_photo_height">304dp</dimen>
@@ -16,13 +17,13 @@
     <dimen name="detail_metabar_vert_padding">16dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_body_bottom_margin">88dp</dimen>
-    <dimen name="card_image_horizontal_margin">8dp</dimen>
-    <dimen name="card_image_top_margin">8dp</dimen>
+    <dimen name="card_image_horizontal_margin">0dp</dimen>
+    <dimen name="card_image_top_margin">0dp</dimen>
     <dimen name="text_horizontal_padding">16dp</dimen>
     <dimen name="text_padding_top">16dp</dimen>
     <dimen name="title_padding_bottom">4dp</dimen>
     <dimen name="subtitle_padding_bottom">16dp</dimen>
-    <dimen name="card_horizontal_margin">16dp</dimen>
+    <dimen name="card_horizontal_margin">4dp</dimen>
     <dimen name="card_vertical_margin">8dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_layout_elevation">2dp</dimen>
