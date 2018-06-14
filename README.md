@@ -10,3 +10,11 @@ Through this project I learned:
 - How to Apply Material Design guidelines to an mobile application.
 - Separate an interface into surfaces.
 - Effectively use transitions and motion.
+
+## Screenshots:
+### Nexus 5X:
+<img src="https://github.com/roiAttia/XYZReader/blob/master/XYZReader/screenshots/Nexus5X.jpg" />
+
+### Nexus 9:
+<img src="https://github.com/roiAttia/XYZReader/blob/master/XYZReader/screenshots/Nexus9.jpg" />
+
