@@ -1,4 +1,5 @@
 # XYZ Reader - An RSS feed reader app
+Udacity's Android Developer Nanodegree Program Project.
 
 ## About this Project
 A project of Udacity's Android Nanodegree program.
