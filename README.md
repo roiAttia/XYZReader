@@ -8,7 +8,7 @@ This project porpuse is to improve an app’s design, a vital skill for building
 ## Goals for this Project
 Through this project I learned:
 - The fundamentals of Android design.
-- How to Apply Material Design guidelines to an mobile application.
+- How to Apply Material Design guidelines to a mobile application.
 - Separate an interface into surfaces.
 - Effectively use transitions and motion.
 
